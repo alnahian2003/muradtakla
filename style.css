@@ -148,6 +148,7 @@ button,
 #main .card-header {
   cursor: pointer;
   font-weight: 300 !important;
+  border-radius: 10px !important;
 }
 
 /* Extra small devices (portrait phones, less than 576px) */

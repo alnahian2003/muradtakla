@@ -141,13 +141,12 @@ button,
 }
 
 #main .card {
-  box-shadow: 0 10px 30px #00000020;
+  box-shadow: 0 10px 30px #00000010;
   border-radius: 10px !important;
 }
 
 #main .card-header {
   cursor: pointer;
-  border-radius: 10px !important;
   font-weight: 300 !important;
 }
 

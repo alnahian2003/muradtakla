@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base target="_blank">
+
+  <!-- ফেভিকন -->
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="images/favicon/manifest.json" />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <!-- Required Social Preview MetaTags -->
+
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="মুরাদ টাকলা অভিধান — Murad Takla Dictionary">
+  <meta name="description" content="আমাদের আশেপাশের মুরাদ টাকলাদের ব্যবহৃত, পরিচিত শব্দভান্ডার ও সেসবের অর্থ
+            জেনে নিন খুব সহজেই !">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alnahian2003.github.io/muradtakla">
+  <meta property="og:title" content="মুরাদ টাকলা অভিধান — Murad Takla Dictionary">
+  <meta property="og:description" content="আমাদের আশেপাশের মুরাদ টাকলাদের ব্যবহৃত, পরিচিত শব্দভান্ডার ও সেসবের অর্থ
+            জেনে নিন খুব সহজেই !">
+  <meta property="og:image" content="preview.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://alnahian2003.github.io/muradtakla">
+  <meta property="twitter:title" content="মুরাদ টাকলা অভিধান — Murad Takla Dictionary">
+  <meta property="twitter:description" content="আমাদের আশেপাশের মুরাদ টাকলাদের ব্যবহৃত, পরিচিত শব্দভান্ডার ও সেসবের অর্থ
+            জেনে নিন খুব সহজেই !">
+  <meta property="twitter:image" content="preview.jpg">
+
+  <!-- End of Required Social Preview MetaTags -->
+
+  <!-- হিন্দ শিলিগুড়ি — গুগল ফন্ট -->
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- বুটস্ট্র্যাপ ভার্শন ৪.৫.৩ এর সিডিএন -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+
+  <!-- মূল সিএসএস সোর্স -->
+  <link rel="stylesheet" href="style.css" />
+
+  <title>মুরাদ টাকলা অভিধান — Murad Takla Dictionary</title>
+</head>
+
+<body>
+  <!-- হেডার সেকশন -->
+  <header class="bg-light">
+    <div class="container-fluid navbar-light">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#" target="_self"><img src="images/logo.svg" alt="" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link text-center" data-toggle="modal" data-target="#historyModal" href="#">কে এই "মুরাদ
+                টাকলা?"</a>
+            </li>
+            <!-- মোডাল -->
+            <div class="modal fade" id="historyModal" tabindex="-1" aria-labelledby="historyModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title font-weight-bold" id="historyModalLabel">
+                      মুরাদ টাকলার ইতিহাস
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>
+                      সামাজিক যোগাযোগ মাধ্যমগুলোতে যাদের নিয়মিত যাতায়াত রয়েছে তারা প্রায়ই ‘মুরাদ টাকলা’ সমস্যার সম্মুখীন
+                      হন। ভুক্তভোগীরা অনেকেই এর সঙ্গে সুপরিচিত। কিন্তু এমনও অনেকে রয়েছেন যারা হয়ত কথাটা শুনেছেন কিন্তু
+                      স্পষ্ট ধারনা নেই। কেউ ভাবতে পারেন, একে দিয়ে কি মুরাদ নামের কোন টাক মাথার ব্যক্তিকে বোঝানো হয়?
+                      <br>
+
+                      <h5>কে এই ‘মুরাদ টাকলা’?</h5>
+
+                      আসলে মুরাদ টাকলা নামে নির্দিষ্ট কোন ব্যক্তি নেই। সীমিত ভাষাজ্ঞানের যে কেউ এই নামে পরিচিত হতে
+                      পারেন। এই কথাটির উদ্ভব ফেসবুকে এক কমেন্ট থেকে।
+                      <br>
+                      <br>
+                      এক জন হুমকির সুরে লিখতে চেয়েছিলেন “মুরোদ থাকলে
+                      যুক্তি দিয়ে বল। ফালতু ছবি দিয়েছিস ক্যান? লেখাপড়া করে কথা বল”।
+
+                      <br> কিন্তু তিনি বিকৃত বানানে লিখে বসেন,
+                      <b> “Murad takla jukti diya bal, falti pic dicos kan! Lakapar kora kata bal”.</b>
+                      <br> এই কমেন্টের
+                      একটি স্ক্রিনশট কিছু ফেসবুক পেইজ লুফে নেয়। এর পর থেকেই বাংলা কথা যারা বিকৃত বানানে লিখেন তাদের
+                      ‘মুরাদ টাকলা’ নামে ডাকা শুরু হয়।
+                      <br><br>
+
+                      সারা পৃথিবীতে বিশেষ প্রয়োজনে যে কোন ভাষা রোমান হরফে লেখা হয়। একে ট্রান্সলিটারেশন বলা হয়। এর কিছু
+                      সুবিধা রয়েছে। যেমন এর মাধ্যমে যে কোন অপরিচিত ভাষার শব্দ উচ্চারণ করা বা পড়া যায়। বিদেশিদের ভাষা
+                      শিখতে এটা বিশেষভাবে কাজে দেয়।
+                      <br><br>
+
+                      বাঙালিদের মধ্যে যারা কম্পিউটার বা স্মার্টফোনে বাংলা টাইপ করতে জানেন না তারাও ট্রান্সলিটারেশনের
+                      সহায়তা নেন। এটা দোষের কিছু না। কিন্তু যারা ইংরেজির অক্ষরগুলোর সঠিক উচ্চারণ না জেনে এমনটা করেন তখনই
+                      তৈরি হয় বিপত্তি। অনেক সময়ই এই বিকৃতি অশ্লীলতার পর্যায়ে চলে যায়।
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                      বুঝেছি!
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link text-center dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                যোগাযোগ
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="https://facebook.com/alnahian2003" target="_blank">ফেইসবুক</a>
+                <a class="dropdown-item" href="https://github.com/alnahian2003" target="_blank">গিটহাব</a>
+                <a class="dropdown-item" href="https://behance.net/alnahian2003" target="_blank">বিহ্যান্স</a><a
+                  class="dropdown-item" href="https://alnahian2003.github.io/me" target="_blank">পোর্টফোলিও</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-center" href="https://github.com/alnahian2003/muradtakla" target="_blank">স্টার
+                দিন ★</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-center"
+                href="mailto:a.alnahian2003@gmail.com?subject=%E0%A6%A8%E0%A6%A4%E0%A7%81%E0%A6%A8%20%E0%A6%B6%E0%A6%AC%E0%A7%8D%E0%A6%A6%20%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%20%E0%A6%95%E0%A6%B0%E0%A6%BE%E0%A6%B0%20%E0%A6%B0%E0%A6%BF%E0%A6%95%E0%A7%81%E0%A7%9F%E0%A7%87%E0%A6%B8%E0%A7%8D%E0%A6%9F%20%E2%80%94%20%22%E0%A6%AE%E0%A7%81%E0%A6%B0%E0%A6%BE%E0%A6%A6%20%E0%A6%9F%E0%A6%BE%E0%A6%95%E0%A6%B2%E0%A6%BE%20%E0%A6%85%E0%A6%AD%E0%A6%BF%E0%A6%A7%E0%A6%BE%E0%A6%A8%22&body=%E0%A6%86%E0%A6%B8%E0%A6%B8%E0%A6%BE%E0%A6%B2%E0%A6%BE%E0%A6%AE%E0%A7%81%20%E0%A6%86%E0%A6%B2%E0%A6%BE%E0%A6%87%E0%A6%95%E0%A7%81%E0%A6%AE%20!%0D%0A%E0%A6%95%E0%A6%BF%E0%A6%9B%E0%A7%81%20%E0%A6%A8%E0%A6%A4%E0%A7%81%E0%A6%A8%20%E0%A6%B6%E0%A6%AC%E0%A7%8D%E0%A6%A6%20%E0%A6%AF%E0%A7%81%E0%A6%95%E0%A7%8D%E0%A6%A4%20%E0%A6%95%E0%A6%B0%E0%A6%BE%E0%A6%B0%20%E0%A6%85%E0%A6%A8%E0%A7%81%E0%A6%B0%E0%A7%8B%E0%A6%A7%20%E0%A6%B0%E0%A6%87%E0%A6%B2%E0%A7%8B%E0%A5%A4%0D%0A%E0%A6%B6%E0%A6%AC%E0%A7%8D%E0%A6%A6%E0%A6%97%E0%A7%81%E0%A6%B2%E0%A7%8B%20%E0%A6%B9%E0%A6%B2%E0%A7%8B%E0%A6%83-%0D%0A"
+                target="_self">নতুন
+                শব্দ যুক্ত করুন +</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- হেডার সেকশন সমাপ্ত -->
+
+  <!-- হিরো সেকশন -->
+  <section id="hero" class="text-center">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-12 col-lg-8 col-md-8 m-auto">
+          <!-- হিরো সেকশনের ডেস্ক্রিপশন -->
+          <h1>মুরাদ টাকলা অভিধান</h1>
+          <p class="text-dark text-medium my-3">আমাদের আশেপাশের মুরাদ টাকলাদের পরিচিত শব্দভান্ডার ও সেসবের অর্থ
+            জেনে নিন খুব সহজেই !
+            <br>
+            <small class="font-weight-bold text-muted">ভার্শন ১.০</small>
+          </p>
+
+          <!-- সার্চ ফর্ম -->
+          <div id="searchForm" class="m-5">
+            <input type="text" id="searchInput" placeholder="বাংলায় সার্চ করুন মুরাদ টাকলা শব্দভাণ্ডারে...">
+            <label class="search-icon float-right" for="searchInput">
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                  d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                <path fill-rule="evenodd"
+                  d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+              </svg>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- হিরো সেকশন সমাপ্ত -->
+
+  <!-- মূল টাকলা ট্যাব সমূহ -->
+  <div id="main">
+    <div class="container">
+      <h3 class="text-center mb-5">যেকোনো ট্যাবে ক্লিক করে প্রকৃত অর্থ জানুন</h3>
+      <div class="row">
+        <!-- 1st Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab1">
+              <h5 class="my-auto text-center text-truncate">এদের গেন দাও প্রভু এদের খমা ক্র</h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab1">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "এদের জ্ঞান দাও প্রভু, এদের ক্ষমা করো"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                (ভাইটির দোয়া কবুল হোক, আমিন)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2nd Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab2">
+              <h5 class="my-auto text-center text-truncate">বুকের বেতা কেউ ভুঝলো না, সভাই বলে গেস্টিকের বেতা</h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab2">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "বুকের ব্যাথা কেউ বুঝলো না, সবাই বলে গ্যাস্ট্রিকের ব্যাথা"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                ( ভাইটির জন্য সমবেদনা রইলো )
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3rd Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab3">
+              <h5 class="my-auto text-center text-truncate">বনাম বুল অতেয় ফারে, মানোস মাএই বুল। মেন ইঝ মঢাল</h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab3">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "বানান ভুল হতেই পারে, মানুষ মাত্রই ভুল। ম্যান ইজ মর্টাল"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                প্রকৃত ট্রান্সলেশন হচ্ছে, To err is human (মানুষ মাত্রই ভুল)
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab4">
+              <h5 class="my-auto text-center text-truncate">কিচু সট সট বুল ককনোই শুক্রাণু ঝায় ণা</h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab4">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "কিছু ছোট ছোট ভুল কখনোই শোধরানো যায় না"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                আসলেই ছোট ছোট ভুল কখনোই শোধরানো যায় না, চাইলেও সম্ভব হয় না।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab5">
+              <h5 class="my-auto text-center text-truncate">একানে যে পসরাফ করিবে, তার দনে ঠাডা পরিবে</h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab5">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "এখানে যে প্রসাব করিবে, তার টুনটুনিতে ঠাডা পরিবে"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                এরকম ভয়ংকর হুমকি জীবনে খুব কমই দেখেছি। তবে এটা হুমকি না অভিশাপ, ঠিক বুঝতে পারলাম না।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab6">
+              <h5 class="my-auto text-center text-truncate">বালবাসা এমন এখটা Apps, যা শবার ঝিবনে Install হয়না</h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab6">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "ভালোবাসা এমন একটা Apps, যা সবার জীবনে Install হয়না"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                ভাই, আপনাদের যে র‍্যাম, তাতে বেঁচে আছেন এতেই খুশিতে বাসায় গিয়ে মিলাদ দেন।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab7">
+              <h5 class="my-auto text-center text-truncate">কুতাই বানাম বুল করচি পুমান দে</h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab7">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "কোথায় বানান ভুল করছি? প্রমাণ দে"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                ঠিকই তো, ভাইটি ভুল কোথায় করেছেন?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab8">
+              <h5 class="my-auto text-center text-truncate">
+                হায়রে মানোস কত কারাপ। মানোসকে নিয়ে হাসাহাসির আগে নিঝের ভানান
+                দেকা উচিন
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab8">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "হায়রে মানুষ কত খারাপ, মানুষকে নিয়ে হাসাহাসির আগে নিজের বানান দেখা উচিৎ"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                জ্বি ভাই, সহমত ভাই, ঠিক ভাই...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab9">
+              <h5 class="my-auto text-center text-truncate">
+                এই বিস্টিতে ভূনাকিশোরী খাইতে ইচ্ছা করে
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab9">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "এই বৃষ্টিতে ভুনাখিচুড়ি খেতে ইচ্ছে করে"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                আমারো খেতে ইচ্ছে করছে, কিন্তু আপনি খিচুড়ি ছেড়ে কিশোরী কেনো খাবেন? এটা কোন দেশের ফুড আইটেম?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab10">
+              <h5 class="my-auto text-center text-truncate">
+                আঝে বাঝে কমান না করা বালো উনি বালো পোসট কোরেচেন এখানে সেখার আচে
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab10">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "আজেবাজে কমেন্ট না করাই ভাল, উনি ভাল পোষ্ট করেছেন। এখানে শেখার আছে"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                আজেবাজে কমেন্ট করা থেকে যতটা সম্ভব এড়িয়ে যাওয়াই ভাল, বিশেষ করে টাকলা কমেন্ট না করা আরো বেশী ভাল।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab11">
+              <h5 class="my-auto text-center text-truncate">
+                আঝ আমার বন্দু ইমনের গোয়া হলুদ
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab11">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "আজ আমার বন্ধু ইমনের গায়ে হলুদ"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                বন্ধু ইমনের দাম্পত্য জীবনের জন্য শুভকামনা রইলো।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab12">
+              <h5 class="my-auto text-center text-truncate">
+                পস্ট এপুব কর নাহ্লে ১০মিনিতে গ্রপ কেয়ে দিব
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab12">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "পোষ্ট অ্যাপ্রুভ কর, নাহলে ১০ মিনিটে গ্রুপ খেয়ে দিব"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                ফেইসবুক গ্রপ অ্যাডমিন এবং মডারেটররা সাবধান !
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 13th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab13">
+              <h5 class="my-auto text-center text-truncate">
+                ও মা গো টুরু লাব
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab13">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "ও মা গো, ট্রু লাভ !"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                আজ পর্যন্ত বিলুপ্তপ্রায় এই ট্রু লাভ খুঁজে পেলাম না।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab14">
+              <h5 class="my-auto text-center text-truncate">
+                আকা আকা ঘুরা ঘুরি করলাম তার ফাকে ইয়কা পিক মিলান কামন হলো ফেড
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab14">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "একা একা ঘোরাঘুরি করলাম, তাঁর ফাকে একটা পিক নিলাম। কেমন হলো ফ্রেন্ডস?"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                জানিনা।
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 15th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab15">
+              <h5 class="my-auto text-center text-truncate">
+                গু লসান গু দারা গাট তেকে গন্ডার ইয়া কেউ ঝেতে চালে কমড করও
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab15">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "গুলশান, গুদারা ঘাট থেকে গন্ডারিয়া কেউ যেতে চাইলে কমেন্ট করো"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                সরি ভাই, পারলাম নাহ। গন্ডার ইয়া আর গু লসান, ওখানে কি গন্ডারের গুয়ের মধ্যে মাখামাখি হয়ে আছে?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab16">
+              <h5 class="my-auto text-center text-truncate">
+                একটি রিদয় হাট টাছিন স্টোরি
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab16">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "একটি হৃদয়, হার্ট টাচিং স্টোরি"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                হার্টদূর্বল লোকেরা এসব স্টোরি পড়বেন নাহ...
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 17th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab17">
+              <h5 class="my-auto text-center text-truncate">
+                খব ইচ্ছা হয় জান্তে একটি বারের জন্যওকি মোনে করিস আমাই,,,i,,,mis,,,u
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab17">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "খুব ইচ্ছা হয় জানতে, একটি বারের জন্যেও কি মনে করিস আমায়? I miss you "
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                বেলা শুনছো? আজও কি মনে করো আমায়?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 18th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab18">
+              <h5 class="my-auto text-center text-truncate">
+                কোনো মেয়েকেই আর বিশসাস করতে ইচ্ছা করেনা। বিশসাস করলেও বরশা করতে পারি না
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab18">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "কোনো মেয়েকেই আর বিশ্বাস করতে ইচ্ছে করেনা। বিশ্বাস করলেও ভরসা করতে পারি না"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                কিছু কিছু মেয়ে নামের কালনাগিনীদের আসলেই বিশ্বাস করা উচিৎ না ভ্রাতা !
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 19th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab19">
+              <h5 class="my-auto text-center text-truncate">
+                কসট কেন জানেন আমাকে কেউ বাল বাসেনা
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab19">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "কষ্ট কেনো জানেন? আমাকে কেউ ভালোবাসে না"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                এত কষ্ট কষ্ট লাগে কেন অন্তরে, যেন কান্নার কবিতা...
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 20th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab20">
+              <h5 class="my-auto text-center text-truncate">
+                ছলো বন্দু গুরে আসি, একটু গুরলে ঝদি বালো লাগে, তাইলে কতি কি?
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab20">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "চলো বন্ধু ঘুরে আসি, একটু ঘুরলে যদি ভাল লাগে, তাহলে ক্ষতি কি?"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                বেশী ঘোরা যাবেনা বদ্দা ! তখন আবার মাথা ঘুরিয়ে পড়ে গিয়ে একটা অঘটন ঘটিয়ে ফেলবেন।
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 21th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab21">
+              <h5 class="my-auto text-center text-truncate">
+                Vi ata ki dilen... akdom bokr dan pasa laglo
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab21">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "ভাই, এটা কি দিলেন? একদম বুকের ডান পাশে লাগলো"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                আহা গো সোনা আমার... খুব কষ্ট হয়েছে, বলো?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 22th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab22">
+              <h5 class="my-auto text-center text-truncate">
+                chade bose chad dekhchi
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab22">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "ছাদে বসে চাঁদ দেখছি"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                কি ! ছাদে বসে চাঁদ দেখছেন নাকি চাঁদে বসে ছাদ দেখছেন? ওখান থেকে কাঞ্চনজঘা কী পরিষ্কার দেখা যাচ্ছে?
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 23th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab23">
+              <h5 class="my-auto text-center text-truncate">
+                Gora alam coks bagar
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab23">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "ঘুরে এলাম কক্সবাজার"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                ভাল তো ! ভাল না?
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 24th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab24">
+              <h5 class="my-auto text-center text-truncate">
+                ame tomr pasa takla to vlo hoto
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab24">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "আমি তোমার পাশে থাকলে তো ভাল হতো"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                আমাদের সবাই সবার পাশে থাকা উচিৎ।
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 25th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab25">
+              <h5 class="my-auto text-center text-truncate">
+                kub 10tin a aci2 vai... apni ga blcen sure2 vai?
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab25">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "খুব টেনশনে আছিতো ভাই।
+                আপনি যা বলছেন শিওর তো ভাই?"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                দাড়ান ভাই, শিওর হয়েই জানাচ্ছি আপনাকে।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 26th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab26">
+              <h5 class="my-auto text-center text-truncate">
+                My wife your pregnant. God blast you.
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab26">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "আমার স্ত্রী গর্ভবতী, আল্লাহ তার মঙ্গল করুক"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                জোরেশোরে বলি আমিন !
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 27th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab27">
+              <h5 class="my-auto text-center text-truncate">
+                Ka ka acban amadar bacay baraita?
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab27">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "কে কে আসবেন আমাদের বাসায় বেড়াতে?"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                ওরে তোরা কে কে যাবি, চলে আয় !
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 28th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab28">
+              <h5 class="my-auto text-center text-truncate">
+                Duniya ka china gf ka china sudu bast frd taka chi
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab28">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "দুনিয়াকে চাই না, গার্লফ্রেন্ডকে চাই না। শুধু বেস্টফ্রেন্ডটা কে চাই"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                আপনাদের বন্ধুত্ব অটুট থাকুক চিরকাল।
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 29th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab29">
+              <h5 class="my-auto text-center text-truncate">
+                Gogonnath Eunivarsity's Poletecal Figar
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab29">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "জগন্নাথ ইউনিভার্সিটির পলিটিক্যাল ফিগার"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                খুব উপকার হইলো !
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 30th Tab -->
+        <div class="col-12 col-lg-4 col-md-6">
+          <div class="card test bg-white border-0 my-3">
+            <div class="card-header p-4 border-0 bg-white" data-toggle="collapse" data-target="#tab30">
+              <h5 class="my-auto text-center text-truncate">
+                Amra podda noder magi, onak moga korlam
+              </h5>
+            </div>
+            <div class="card-body border-top collapse" id="tab30">
+              <p>
+                <b>প্রকৃত অর্থঃ</b><br>
+                "আমরা পদ্মা নদীর মাঝি, অনেক মজা করলাম"
+                <br>
+                <b>মন্তব্যঃ</b>
+                <br>
+                ওহ, আপনারা পদ্মা নদীর মাঝি? আগে বলবেন না?
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- মূল টাকলা ট্যাব সমূহ সমাপ্ত -->
+
+  <!-- একনজরে মুরাদ টাকলা শব্দভান্ডার -->
+  <div id="glance" class="text-center bg-light py-5">
+    <div class="container">
+      <h3>একনজরে মুরাদ টাকলা শব্দভান্ডার</h3>
+      <div class="glance-table  table-responsive">
+        <table class="table bg-white my-5">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col">সঠিক বাংলা</th>
+              <th scope="col">মুরাদ টাকলা</th>
+              <th scope="col">সঠিক বাংলিশ</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">ব্যাথা</th>
+              <th>Beta/Bata (বেটা/বাটা)</th>
+              <th>Betha</th>
+            </tr>
+            <tr>
+              <th scope="row">আচ্ছা</th>
+              <th>Acca/Assa (আক্কা/আসসা)</th>
+              <th>Accha</th>
+            </tr>
+            <tr>
+              <th scope="row">ছবি</th>
+              <th>Cobi</th>
+              <th>Chobi</th>
+            </tr>
+            <tr>
+              <th scope="row">ইচ্ছা</th>
+              <th>Icca/Isca (ইসচা/ইসকা)</th>
+              <th>Iccha</th>
+            </tr>
+            <tr>
+              <th scope="row">ভাই</th>
+              <th>Bai/Bae (বাই/বায়)</th>
+              <th>Bhai/Vai</th>
+            </tr>
+            <tr>
+              <th scope="row">চোখ</th>
+              <th>Cock/Cok (কক/কোক)</th>
+              <th>Chokh</th>
+            </tr>
+            <tr>
+              <th scope="row">বুঝিনা/বুঝেনা</th>
+              <th>Bugina/Bugena (বুগিনা/বুগেনা)</th>
+              <th>Bujhina/Bujhena</th>
+            </tr>
+            <tr>
+              <th scope="row">ভাগিনা</th>
+              <th>Vagina/Bagina (ভ্যাজাইনা/বাগিনা)</th>
+              <th>Bhagina/Vagina</th>
+            </tr>
+            <tr>
+              <th scope="row">আমার</th>
+              <th>Amer/Amr (আমের/আম্র)</th>
+              <th>Amar</th>
+            </tr>
+            <tr>
+              <th scope="row">তুমি/তুই</th>
+              <th>Tome/Toe (তোমে/ তোই)</th>
+              <th>Tumi/Tui</th>
+            </tr>
+            <tr>
+              <th scope="row">বন্ধু</th>
+              <th>Bondo/Vondu (বন্দো/ভন্ডু)</th>
+              <th>Bondhu</th>
+            </tr>
+            <tr>
+              <th scope="row">ঠিক আছে</th>
+              <th>Tekaca/Tikaca (টেকাকা/টিকাচা)</th>
+              <th>Thik Ache</th>
+            </tr>
+            <tr>
+              <th scope="row">দোস্ত</th>
+              <th>Dustu (দুস্তু/ডুস্টু)</th>
+              <th>Dosto</th>
+            </tr>
+            <tr>
+              <th scope="row">ভালোবাসা/ভালবাসি</th>
+              <th>Balobasa/Balobase (বালোবাসা/বালোবাসে)</th>
+              <th>Bhalobasa/Bhalobasi</th>
+            </tr>
+            <tr>
+              <th scope="row">এটা</th>
+              <th>Ata (আটা)</th>
+              <th>Eta</th>
+            </tr>
+            <tr>
+              <th scope="row">গেছিস</th>
+              <th>Gacas/Gaces/Gasis (গাকাস/গাকেস/গাসিস)</th>
+              <th>Gechish/Giyechis</th>
+            </tr>
+            <tr>
+              <th scope="row">থাকবে/থাকবো</th>
+              <th>Takbe/Takbo (টাকবে/টাকবো)</th>
+              <th>Thakbe/Thakbo</th>
+            </tr>
+            <tr>
+              <th scope="row">যাবো/যাব</th>
+              <th>Gabo/Gaba (গাবো/গাবা)</th>
+              <th>Jabo</th>
+            </tr>
+            <tr>
+              <th scope="row">কেমন</th>
+              <th>Kaman/Kamon (কামান/কামোন)</th>
+              <th>Kemon</th>
+            </tr>
+            <tr>
+              <th scope="row">পাশে</th>
+              <th>Pasa/Pasha (পাসা/পাশা)</th>
+              <th>Pashe</th>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- একনজরে মুরাদ টাকলা শব্দভান্ডার সমাপ্ত -->
+
+
+  <!-- ফুটার সেকশন -->
+  <footer class="bg-light text-center p-2">
+    <p class="m-auto">শুধুমাত্র বিনোদনমূলক উদ্দেশ্যে তৈরী হয়েছে*
+      <br>
+      কাউকে প্রত্যক্ষ বা পরোক্ষ ভাবে আঘাত করা হয়নি। <br>
+      Made With <span class="text-danger">♥</span> By <a href="https://alnahian2003.github.io/me">Al Nahian</a>
+    </p>
+  </footer>
+  <!-- ফুটার সেকশন -->
+
+  <!-- দরকারী বুটস্ট্র্যাপ জেকুয়েরীর সিডিএন লিংক  -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+
+  <!-- মূল জেএস সোর্স -->
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,188 @@
+* {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Hind Siliguri", sans-serif !important;
+  font-size: 18px !important;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.modal-body::-webkit-scrollbar {
+  width: 10px;
+  cursor: pointer;
+}
+
+.modal-body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+h1 {
+  font-size: 76px;
+}
+
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 40px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700 !important;
+}
+
+section {
+  padding: 100px 20px;
+}
+
+img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+button,
+.btn {
+  outline: none !important;
+  border: none !important;
+}
+
+.text-medium {
+  font-weight: 500 !important;
+}
+
+
+/* মূল স্টাইল */
+.navbar-brand img {
+  width: 2rem;
+}
+
+.nav-item,
+.nav-item a {
+  font-weight: 500;
+  color: #000000 !important;
+}
+
+
+#hero {
+  height: 100%;
+  width: 100%;
+}
+
+#searchForm {
+  position: relative;
+}
+
+#searchForm input {
+  width: 100%;
+  padding: 15px 20px;
+  padding-right: 50px !important;
+  border-radius: 50px;
+  outline: 1px solid transparent !important;
+  border: 2px solid transparent !important;
+  background-color: #f8f8f8;
+}
+
+#searchForm input:focus {
+  box-shadow: 0 30px 60px #00000010;
+  transition: .3s;
+  border: 2px solid #000000 !important;
+  background-color: #ffffff !important;
+}
+
+#searchForm input:focus .search-icon {
+  background-color: #ffffff !important;
+}
+
+.search-icon {
+  position: absolute;
+  right: 5%;
+  top: 25%;
+  cursor: pointer;
+}
+
+#main {
+  padding: 20px;
+  padding-bottom: 100px !important;
+}
+
+#main .card {
+  box-shadow: 0 10px 30px #00000020;
+  border-radius: 10px !important;
+}
+
+#main .card-header {
+  cursor: pointer;
+  border-radius: 10px !important;
+  font-weight: 300 !important;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+  section {
+    padding: 100px 20px 50px 20px;
+  }
+
+  h1 {
+    font-size: 36px !important;
+  }
+
+  h3 {
+    font-size: 24px !important;
+  }
+
+  h5 {
+    font-size: 20px !important;
+  }
+
+  #searchForm {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+  }
+
+  #searchForm input {
+    padding-right: 50px !important;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #main .container .row .col-md-6:last-child {
+    margin: auto !important;
+  }
+}

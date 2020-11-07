@@ -149,6 +149,11 @@ a.dropdown-item:active, a.dropdown-item:focus {
   border-radius: 10px !important;
 }
 
+#main .card:hover {
+  transform: translateY(-10px);
+  transition: .3s;
+}
+
 #main .card-header {
   cursor: pointer;
   font-weight: 300 !important;

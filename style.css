@@ -151,6 +151,7 @@ a.dropdown-item:active, a.dropdown-item:focus {
 
 #main .card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 20px 30px -16px #00000025;
   transition: .3s;
 }
 
